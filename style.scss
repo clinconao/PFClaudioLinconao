@@ -1,0 +1,213 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    justify-content: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+// paleta de colores
+
+$color1: black;
+$color2: rgb(242, 243, 245);
+
+// formatos en general
+
+$pad10: 10px;
+$pad20: 20px;
+$pad30: 30px;
+$logoS: 60px;
+$logoL: 300px;
+
+$h1centrado: 100px 0px;
+
+
+// header
+
+.navbar {
+    background-color: $color1;
+    padding: $pad20;
+}
+
+// main 
+
+a:link, a:visited, a:active{
+    text-decoration: none;
+    color: $color2;
+}
+
+main{
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+    padding: $pad10;
+    width: 100%;
+    overflow-x: hidden;
+    & h1{
+        margin: $h1centrado;
+        text-align: center;
+        color: $color2;
+    }
+    & h3{
+        color: $color2;
+        text-align: center;
+    }
+}
+
+.ElAncla{
+    margin: 50px;
+    text-align: center;
+    color: $color2;
+}
+
+.parrafoOpaco{
+    background: rgba(0, 0, 0, 0.5);
+    color:#f1f1f1;
+    padding: $pad20;
+}
+
+.logo{
+    max-width: $logoS;
+}
+
+.carousel{
+    padding: 10px;
+    padding-top: 35px;
+    &-item{
+        max-height: 60vh;
+        background-color: $color2;
+        color: $color1;
+    }
+    & .fa-caret-right{
+        font-size: 8vw;
+    }
+    
+}
+
+
+
+.servicios{
+    padding: $pad20;
+    & img{
+        max-height: 160px;
+        max-width: 262px;
+        margin: auto;
+    }
+}
+
+
+.cardServicios{
+    filter: grayscale(100%);
+    margin: 20px;
+    min-height: 400px;
+    &:hover{
+        filter: grayscale(0%);
+        transition: all 0.9s;
+        transform: scale(1.1);
+    }
+}
+
+
+.avatar {
+    border: 2px solid #cccccc42;
+    background-color: #0f25b71b;
+    color: $color2;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+    & img{
+        float: left;
+        margin-right: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+}
+
+.clima{
+    padding: 20px;
+    align-items: center;
+}
+
+
+// footer
+
+.footer{
+    background-color: $color1;
+    text-align: center;
+    color: $color2;
+}
+
+div.redes{
+    font-size: 40px;
+    letter-spacing: $pad20;
+}
+
+.botonsubir{
+    position: fixed;
+    right: 50px;
+    bottom: 70px;
+    & .fa-circle-up{
+        font-size: 4vh;
+    }
+}
+
+
+// pagina servicios
+
+.itemS{
+    background: rgba(0, 0, 0, 0.345);
+    color:#f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    & img{
+        margin: 10px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+// pagina contacto
+
+.formContacto{
+    max-width: 600px;
+    margin: auto;
+}
+
+// pagina nosotros
+.about {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.364);
+    & h1 {
+        color: $color2;
+    }
+    & p{
+        color: $color2;
+    }
+    & img{
+        max-height: 250px;
+    }
+}
+
+.title {
+    color: rgb(67, 59, 59);
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .cardServicios{
+        max-width: 450px;
+    }
+}
